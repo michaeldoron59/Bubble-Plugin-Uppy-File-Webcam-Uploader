@@ -4,22 +4,17 @@
             "name": "up",
             "url": "//dd7tel2830j4w.cloudfront.net/f1578670985990x199833086222686900/uppy-logo-2019%20%281%29.svg"
         },
-        "ALR": {
+        "ANK": {
             "name": "uppy_css_source",
-            "url": "//dd7tel2830j4w.cloudfront.net/f1578765351175x139423091133036980/uppy.min.css"
+            "url": "//meta-q.cdn.bubble.io/f1708243397563x675994908361816800/uppy.min.css"
         },
-        "ALS": {
-            "name": "uppy_js_source",
-            "url": "//dd7tel2830j4w.cloudfront.net/f1578765371467x445963318504138940/uppy.min.js"
+        "ANM": {
+            "name": "uppy js source",
+            "url": "//meta-q.cdn.bubble.io/f1708245889878x555463275281113300/uppy.min.js"
         }
     },
     "dependencies": {
+        "plugin_api_version": "4",
         "use_jquery": false
-    },
-    "shared_keys": {
-        "AJZ": {
-            "caption": "bearer_key",
-            "type": "secure"
-        }
     }
 }

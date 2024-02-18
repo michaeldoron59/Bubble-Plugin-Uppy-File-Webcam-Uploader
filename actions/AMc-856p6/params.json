@@ -1,0 +1,90 @@
+{
+    "category": "plugins",
+    "display": "sign urls",
+    "fields": {
+        "AMe": {
+            "caption": "S3_ACCESS_KEY_ID",
+            "doc": "Your access key id to S3",
+            "editor": "StaticText",
+            "name": "s3_access_key_id",
+            "rank": 0
+        },
+        "AMf": {
+            "caption": "S3_SECRET_ACCESS_KEY",
+            "doc": "Your secret access key to S3",
+            "editor": "StaticText",
+            "name": "s3_secret_access_key",
+            "rank": 1
+        },
+        "AMg": {
+            "caption": "bucket",
+            "editor": "StaticText",
+            "name": "bucket",
+            "rank": 2
+        },
+        "AMh": {
+            "caption": "region",
+            "editor": "StaticText",
+            "name": "region",
+            "rank": 4
+        },
+        "AMp": {
+            "caption": "endpoint",
+            "editor": "StaticText",
+            "name": "endpoint",
+            "rank": 3
+        },
+        "AMr": {
+            "caption": "CLOUDFLARE_WORKER_ENDPOINT",
+            "default_val": "",
+            "doc": "This option is for sending the actual request to a cloudflare worker that will proxy the actual request, the actual signature will be on the bucket endpoint, not the cloudflare worker, your responsibility to swap back the request to the bucket endpoint and keep the original signature.",
+            "editor": "StaticText",
+            "name": "cloudflare_worker_endpoint",
+            "optional": true,
+            "rank": 5
+        },
+        "AMs": {
+            "caption": "names",
+            "doc": "This is going to be the list of file names of your uploaded keys in the bucket.",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "names",
+            "optional": false,
+            "rank": 7,
+            "value": "text"
+        },
+        "AMz": {
+            "caption": "prefix",
+            "doc": "This is going to be the prefix for all the keys, for example if prefix is \"a/b/c/\" it will be uploaded like that: bucket/a/b/c/name, note that it recommended to end with /.",
+            "editor": "DynamicValue",
+            "name": "prefix",
+            "rank": 6,
+            "value": "text"
+        },
+        "ANN": {
+            "caption": "signature expiration time",
+            "default_val": 18000,
+            "doc": "How much time the signature should last in seconds, default = 18k = 5 hours.",
+            "editor": "StaticNumber",
+            "name": "signature_expiration_time",
+            "rank": 8
+        }
+    },
+    "return_value": {
+        "AMd": {
+            "caption": "signed urls",
+            "is_list": true,
+            "name": "signedUrls",
+            "rank": 0,
+            "value": "text"
+        },
+        "AMy": {
+            "caption": "cf endpoint",
+            "name": "cf_endpoint",
+            "rank": 1,
+            "value": "text"
+        }
+    },
+    "type": "server_side",
+    "use_packages": true
+}

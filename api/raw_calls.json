@@ -1,0 +1,13 @@
+{
+    "auth": "none",
+    "calls": {
+        "ANH": {
+            "method": "put",
+            "name": "API Call",
+            "publish_as": "data",
+            "rank": 0,
+            "should_reinitialize": true
+        }
+    },
+    "human": "New API"
+}

@@ -1,0 +1,31 @@
+{
+    "caption": "upload files to s3",
+    "fields": {
+        "AMw": {
+            "caption": "signedUrls",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "signedUrls",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "ANB": {
+            "caption": "cf endpoint",
+            "doc": "the signed url and body will be sent in the headers as signedurl to this endpoint.",
+            "editor": "DynamicValue",
+            "name": "cf_endpoint",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "ANE": {
+            "caption": "parallel uploads",
+            "default_val": 1,
+            "doc": "How many files to upload parallely, please note that some during-upload events might get curropted when setting above 1.",
+            "editor": "StaticNumber",
+            "name": "parallel_uploads",
+            "rank": 2
+        }
+    }
+}
